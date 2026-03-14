@@ -2,6 +2,8 @@
 
 ## 1. MCP 接口（已支持）
 
+前提：运行环境 Python 3.10+。
+
 ### 启动方式
 
 PYTHONPATH=src python scripts/run_mcp.py

@@ -47,7 +47,8 @@
 
 ## 兼容性
 
-- Python 3.9+
+- Python 3.9+（核心抓取/API）
+- Python 3.10+（如需启用 MCP）
 - macOS / Linux（Windows 可用，命令需对应调整）
 - 默认 SQLite，可切换 MySQL / PostgreSQL
 
@@ -233,6 +234,8 @@ PYTHONPATH=src python scripts/run_api.py
 
 PYTHONPATH=src python scripts/run_mcp.py
 
+说明：官方 MCP Python SDK 要求 Python 3.10+。
+
 已提供 MCP Tools：
 
 - health
@@ -271,8 +274,7 @@ PYTHONPATH=src python scripts/run_mcp.py
 
 发布到 GitHub 前请替换以下占位信息：
 
-- pyproject.toml 中的 Homepage / Repository / Issues URL
-- SECURITY.md 与 CODE_OF_CONDUCT.md 中的联系邮箱
+- 无（当前仓库地址与联系邮箱已完成配置）
 
 ## 常见问题
 

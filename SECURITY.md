@@ -8,7 +8,7 @@ The latest main branch is supported.
 
 Please do not open public issues for vulnerabilities.
 
-Report privately to: security@your-domain.example
+Report privately to: 1506183933@qq.com
 
 Please include:
 

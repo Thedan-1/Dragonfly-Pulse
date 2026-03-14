@@ -1,0 +1,131 @@
+sources:
+  - competition_name: 中国国际大学生创新大赛
+    homepage: https://cy.ncss.cn/
+    announcement_page: https://cy.ncss.cn/
+    crawl_frequency: daily
+  - competition_name: 挑战杯全国大学生课外学术科技作品竞赛
+    homepage: https://www.tiaozhanbei.net/
+    announcement_page: https://www.tiaozhanbei.net/tzb/media
+    crawl_frequency: daily
+    list_page_hints:
+      - /tzb/media
+      - /tzb
+    article_keywords:
+      - 通知
+      - 名单
+      - 竞赛
+      - 挑战杯
+  - competition_name: ACM-ICPC国际大学生程序设计竞赛
+    homepage: https://icpc.global/
+    announcement_page: https://icpc.global/
+    crawl_frequency: daily
+    list_page_hints:
+      - /regionals/finder
+      - /worldfinals/worldfinals
+    article_keywords:
+      - Contest
+      - Registration
+      - World Finals
+  - competition_name: 全国大学生数学建模竞赛
+    homepage: https://www.mcm.edu.cn/
+    announcement_page: https://www.mcm.edu.cn/index_cn.html
+    crawl_frequency: daily
+    list_page_hints:
+      - /index_cn.html
+      - /html_cn/section/a657eb64216f6fd724196d37bcb5c1c4.html
+    article_keywords:
+      - 通知
+      - 竞赛
+      - 规则
+      - 评奖
+  - competition_name: 全国大学生电子设计竞赛
+    homepage: https://www.nuedcchina.com/
+    announcement_page: https://www.nuedcchina.com/
+    crawl_frequency: daily
+  - competition_name: 全国大学生广告艺术大赛
+    homepage: https://www.sun-ada.net/
+    announcement_page: https://www.sun-ada.net/
+    crawl_frequency: daily
+  - competition_name: 全国大学生电子商务三创赛
+    homepage: https://www.3chuang.net/
+    announcement_page: https://www.3chuang.net/
+    crawl_frequency: daily
+    list_page_hints:
+      - /
+    article_keywords:
+      - 平台公告
+      - 紧急通知
+      - 大赛
+      - 三创赛
+  - competition_name: 中国大学生计算机设计大赛
+    homepage: https://jsjds.blcu.edu.cn/
+    announcement_page: https://jsjds.blcu.edu.cn/
+    crawl_frequency: daily
+  - competition_name: 蓝桥杯全国软件和信息技术专业人才大赛
+    homepage: https://dasai.lanqiao.cn/
+    announcement_page: https://dasai.lanqiao.cn/
+    crawl_frequency: daily
+    list_page_hints:
+      - /notices
+      - /news
+    article_keywords:
+      - 通知
+      - 大赛
+      - 报名
+  - competition_name: 全国大学生信息安全竞赛
+    homepage: https://www.ciscn.cn/
+    announcement_page: https://www.ciscn.cn/
+    crawl_frequency: daily
+  - competition_name: 中国大学生服务外包创新创业大赛
+    homepage: https://www.fwwb.org.cn/
+    announcement_page: https://www.fwwb.org.cn/
+    crawl_frequency: daily
+  - competition_name: 全国大学生机器人大赛
+    homepage: https://www.cnrobocon.net/
+    announcement_page: https://www.cnrobocon.net/
+    crawl_frequency: daily
+  - competition_name: 中国机器人大赛暨RoboCup中国赛
+    homepage: https://crc.drct-caa.org.cn/
+    announcement_page: https://crc.drct-caa.org.cn/
+    crawl_frequency: daily
+  - competition_name: 中国大学生计算机系统能力大赛
+    homepage: https://compiler.educg.net/
+    announcement_page: https://compiler.educg.net/
+    crawl_frequency: daily
+  - competition_name: 华为ICT大赛
+    homepage: https://e.huawei.com/cn/talent/ict-academy/
+    announcement_page: https://e.huawei.com/cn/talent/ict-academy/
+    crawl_frequency: daily
+  - competition_name: 全国大学生物联网设计竞赛
+    homepage: https://developer.huaweicloud.com/college/wulianwang.html
+    announcement_page: https://developer.huaweicloud.com/college/wulianwang.html
+    crawl_frequency: daily
+  - competition_name: 百度之星程序设计大赛
+    homepage: https://star.baidu.com/
+    announcement_page: https://star.baidu.com/
+    crawl_frequency: daily
+    list_page_hints:
+      - /
+    article_keywords:
+      - 大赛公告
+      - 决赛通知
+      - 获奖名单
+  - competition_name: 全国大学生统计建模大赛
+    homepage: https://tjjmds.ai-learning.net
+    announcement_page: https://tjjmds.ai-learning.net
+    crawl_frequency: daily
+  - competition_name: 全国大学生能源经济学术创意大赛
+    homepage: http://energy.qibebt.ac.cn/
+    announcement_page: http://energy.qibebt.ac.cn/
+    crawl_frequency: daily
+  - competition_name: 世界技能大赛
+    homepage: https://worldskills.org/
+    announcement_page: https://worldskills.org/media/news/
+    crawl_frequency: daily
+    list_page_hints:
+      - /media/news/
+      - /media/news/tag/ws-competitions/
+    article_keywords:
+      - news
+      - competition
+      - conference

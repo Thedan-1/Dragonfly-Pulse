@@ -1,0 +1,33 @@
+name: Bug Report
+description: Report a reproducible bug
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Include expected vs actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide exact steps and sample URLs if relevant.
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: 3.9.6
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: macOS 14
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Paste key log lines, remove secrets first.

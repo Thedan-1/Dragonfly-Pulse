@@ -1,0 +1,14 @@
+requests>=2.32.0
+beautifulsoup4>=4.12.0
+trafilatura>=1.9.0
+readability-lxml>=0.8.1
+python-dateutil>=2.9.0
+dateparser>=1.2.0
+SQLAlchemy>=2.0.30
+PyYAML>=6.0.1
+APScheduler>=3.10.4
+python-dotenv>=1.0.1
+pytest>=8.3.0
+fastapi>=0.115.0
+uvicorn>=0.30.0
+mcp>=1.2.0

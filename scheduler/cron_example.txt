@@ -1,0 +1,2 @@
+# 每天凌晨3点执行抓取
+0 3 * * * cd /path/to/project && /path/to/python -m scripts.run_daily >> logs/crawler.log 2>&1

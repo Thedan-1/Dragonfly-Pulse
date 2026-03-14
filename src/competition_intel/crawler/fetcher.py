@@ -82,7 +82,8 @@ def discover_candidate_list_pages(base_url: str, list_page_hints: List[str] = No
     seen: Set[str] = {base_url}
 
     hints = list_page_hints or []
-    for hint in DEFAULT_LIST_PATH_HINTS + hints:
+    path_hints = hints if hints else DEFAULT_LIST_PATH_HINTS
+    for hint in path_hints:
         url = urljoin(base_url, hint)
         if url not in seen:
             seen.add(url)

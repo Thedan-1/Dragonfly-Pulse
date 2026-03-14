@@ -1,41 +1,75 @@
 # Dragonfly Pulse v0.1.0
 
-## Highlights
+## 中文说明
 
-Dragonfly Pulse is now publicly available as an open-source campus tech competition radar.
+### 亮点
 
-This release focuses on solving information gaps for students and mentors by aggregating official competition announcements and exposing searchable APIs.
+Dragonfly Pulse 首个开源版本发布，定位为校园科技赛雷达。
 
-## What's Included
+本版本核心目标是减少竞赛信息差：自动汇总公告、抽取关键字段、提供可搜索 API。
 
-- Multi-source crawler for campus competitions with per-source config.
-- Announcement discovery from list pages and navigation hints.
-- Content extraction and normalized structured fields.
-- URL-level deduplication and persistent storage.
-- Source health scoring for observability and maintenance.
+### 包含能力
+
+- 多来源抓取与来源配置化管理
+- 公告候选页发现 + 链接去重
+- 正文提取与结构化抽取
+- 来源健康评分
 - REST API:
   - GET /health
   - GET /sources
   - GET /announcements
   - GET /sources/health
-- MCP tools skeleton for AI-agent integration.
+- MCP 工具接口骨架
 
-## Stability and Compatibility
+### 兼容性
+
+- 核心能力：Python 3.9+
+- MCP 官方 SDK：Python 3.10+
+
+### 快速体验
+
+1. `pip install -r requirements.txt`
+2. `PYTHONPATH=src python scripts/init_db.py`
+3. `PYTHONPATH=src python scripts/run_daily.py`
+4. `PYTHONPATH=src python scripts/run_api.py`
+
+### 已知限制
+
+- 部分网站存在反爬或证书异常，可能导致单站点抓取失败
+- Python 3.9 下不支持官方 MCP 运行时
+
+---
+
+## English Notes
+
+### Highlights
+
+Dragonfly Pulse v0.1.0 is the first open-source release of our campus tech competition radar.
+
+This release focuses on reducing information gaps by aggregating official announcements, extracting key fields, and exposing searchable APIs.
+
+### Included
+
+- Multi-source crawler with configuration-driven source management
+- Candidate list page discovery and URL-level deduplication
+- Content extraction and structured information extraction
+- Source health scoring for reliability monitoring
+- REST API endpoints:
+  - GET /health
+  - GET /sources
+  - GET /announcements
+  - GET /sources/health
+- MCP tool-server skeleton for agent integration
+
+### Compatibility
 
 - Core pipeline: Python 3.9+
-- MCP runtime: Python 3.10+
+- Official MCP runtime: Python 3.10+
 
-## Getting Started
+### Known Limitations
 
-1. Install dependencies: pip install -r requirements.txt
-2. Initialize DB: PYTHONPATH=src python scripts/init_db.py
-3. Run crawler once: PYTHONPATH=src python scripts/run_daily.py
-4. Run API: PYTHONPATH=src python scripts/run_api.py
-
-## Known Limitations
-
-- Some target sites use strong anti-crawling or non-standard SSL certificates.
-- MCP official SDK is not available for Python 3.9 runtime.
+- Some websites may block crawling or use non-standard SSL certificates
+- Official MCP SDK is unavailable on Python 3.9 runtime
 
 ## Credits
 

@@ -19,6 +19,19 @@
 | API | `/health` `/sources` `/announcements` `/sources/health` |
 | MCP | 提供工具接口骨架（Python 3.10+） |
 
+## 系统流程图
+
+```mermaid
+flowchart LR
+	A[竞赛来源配置 sources.yaml] --> B[抓取列表页/候选页发现]
+	B --> C[公告链接去重]
+	C --> D[正文提取]
+	D --> E[信息抽取 LLM优先/规则回退]
+	E --> F[(SQLite / PostgreSQL)]
+	F --> G[REST API]
+	F --> H[MCP Tools]
+```
+
 ## 快速开始
 
 ```bash
@@ -71,6 +84,46 @@ PYTHONPATH=src python -m pytest -q
 | GET | `/sources?keyword=` | 来源列表/搜索 |
 | GET | `/announcements?limit=&offset=&competition_name=&keyword=` | 公告查询 |
 | GET | `/sources/health?limit=` | 来源健康评分 |
+
+示例返回：`GET /announcements?limit=2`
+
+```json
+{
+	"items": [
+		{
+			"id": 101,
+			"competition_name": "全国大学生信息安全竞赛",
+			"announcement_title": "第十七届全国大学生信息安全竞赛通知",
+			"registration_deadline": "2026-04-20",
+			"competition_date": "2026-05-15",
+			"organizer": "教育部高等学校网络空间安全专业教学指导委员会",
+			"prize": null,
+			"source_url": "https://example.com/notice/17",
+			"created_time": "2026-03-14T12:00:00"
+		}
+	],
+	"count": 1
+}
+```
+
+示例返回：`GET /sources/health?limit=2`
+
+```json
+{
+	"items": [
+		{
+			"competition_name": "全国大学生信息安全竞赛",
+			"health_score": 82.5,
+			"success_count": 12,
+			"fail_count": 3,
+			"consecutive_failures": 0,
+			"last_error": null,
+			"last_run_time": "2026-03-14T19:20:11"
+		}
+	],
+	"count": 1
+}
+```
 
 ## 兼容性
 

@@ -1,5 +1,9 @@
 # 大学生竞赛情报系统
 
+[![CI](https://github.com/Thedan-1/Dragonfly-Pulse/actions/workflows/ci.yml/badge.svg)](https://github.com/Thedan-1/Dragonfly-Pulse/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](pyproject.toml)
+
 自动监控中国大学生竞赛官网，抓取公告并结构化入库，作为后续竞赛导航、截止提醒、消息推送的数据源。
 
 一句话简介：一个帮助学生和老师打破竞赛信息差的开源情报系统。
@@ -38,6 +42,12 @@
 
 - 扩到 80+ 来源
 - 增加订阅提醒、竞赛日历、个性化推荐
+
+## 版本与发布
+
+- 当前建议首发版本：v0.1.0
+- 发布说明模板：docs/RELEASE_NOTES_v0.1.0.md
+- 变更日志：CHANGELOG.md
 
 ## 适用场景
 

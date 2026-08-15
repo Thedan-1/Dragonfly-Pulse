@@ -8,7 +8,6 @@ SQLAlchemy>=2.0.30
 PyYAML>=6.0.1
 APScheduler>=3.10.4
 python-dotenv>=1.0.1
-pytest>=8.3.0
 fastapi>=0.115.0
 uvicorn>=0.30.0
 mcp>=1.2.0; python_version >= '3.10'

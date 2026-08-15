@@ -75,6 +75,11 @@ PYTHONPATH=src python -m pytest -q
 | `OPENAI_API_KEY` | 空 | LLM 抽取密钥 |
 | `OPENAI_MODEL` | `gpt-4o-mini` | 模型名称 |
 | `OPENAI_BASE_URL` | `https://api.openai.com/v1` | 兼容接口地址 |
+| `USER_AGENT` | `CompetitionIntelBot/0.1` | HTTP 请求 User-Agent |
+| `LOG_LEVEL` | `INFO` | 日志级别 |
+| `LOG_FILE` | 空 | 日志文件路径（空则输出到 stdout） |
+| `API_HOST` | `0.0.0.0` | API 监听地址 |
+| `API_PORT` | `8000` | API 监听端口 |
 
 ## API
 

@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import List, Set
-from urllib.parse import urljoin
+from typing import List, Optional, Set
+from urllib.parse import urljoin, urlsplit, urlunsplit
 from time import sleep
 
 import requests
@@ -33,6 +33,15 @@ class ArticleSeed:
     url: str
 
 
+def _canonicalize_http_url(url: str) -> Optional[str]:
+    """Return a fetchable HTTP(S) URL without a non-semantic fragment."""
+    parsed = urlsplit(url)
+    if parsed.scheme.lower() not in {"http", "https"} or not parsed.netloc:
+        return None
+    return urlunsplit((parsed.scheme.lower(), parsed.netloc, parsed.path,
+                       parsed.query, ""))
+
+
 def fetch_html(url: str) -> str:
     headers = {"User-Agent": APP_SETTINGS.user_agent}
     attempts = APP_SETTINGS.http_retries + 1
@@ -59,7 +68,8 @@ def discover_article_links(list_url: str, article_keywords: List[str] = None) ->
     keywords = article_keywords or DEFAULT_ARTICLE_KEYWORDS
 
     seeds: list[ArticleSeed] = []
-    seen: Set[str] = set()
+    canonical_list_url = _canonicalize_http_url(list_url)
+    seen: Set[str] = {canonical_list_url} if canonical_list_url else set()
 
     for a in soup.find_all("a"):
         href = (a.get("href") or "").strip()
@@ -68,7 +78,9 @@ def discover_article_links(list_url: str, article_keywords: List[str] = None) ->
             continue
         if not any(k.lower() in title.lower() for k in keywords):
             continue
-        url = urljoin(list_url, href)
+        url = _canonicalize_http_url(urljoin(list_url, href))
+        if url is None:
+            continue
         if url in seen:
             continue
         seen.add(url)
